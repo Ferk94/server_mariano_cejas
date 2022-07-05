@@ -1,28 +1,20 @@
 const usersData = [
   {
-    name: "Fernando Kaganovicz",
-    email: "Fernando.Kaganovicz@gmail.com",
-    password: "50325022",
+    name: "Administrador",
+    email: "volt.visual@gmail.com",
+    password: "15530045",
     phoneNumber: "541121775778",
     CoordinatorId: null,
     role: "admin",
   },
   {
-    name: "Martin Silberstein",
-    email: "martin.silberstein.bs@gmail.com",
-    password: "38672970",
+    name: "Mariano Cejas",
+    email: "marianocejas88@hotmail.com",
+    password: "Salta980",
     phoneNumber: "541121564585",
     CoordinatorId: null,
     role: "admin",
-  },
-  {
-    name: "Marcos Ríos",
-    email: "marcosrioos@gmail.com",
-    password: "42491395",
-    phoneNumber: "543329644064",
-    CoordinatorId: null,
-    role: "admin",
-  },
+  }
 ];
 
 module.exports = usersData;
