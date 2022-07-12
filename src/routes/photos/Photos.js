@@ -2,8 +2,13 @@ const express = require("express");
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
+const axios = require('axios');
+const formData = require('form-data');
+const imgbbUploader = require('imgbb-uploader');
 const { Photo } = require("../../db");
 const router = express.Router();
+
+// const formData = require('')
 
 const diskStorage = multer.diskStorage({
   destination: path.join(__dirname, "./images"),
@@ -15,6 +20,7 @@ const diskStorage = multer.diskStorage({
 const filesUpload = multer({
   storage: diskStorage,
 }).array("images");
+
 
 router.get("/", (req, res, next) => {
   Photo.findAll()
@@ -30,6 +36,8 @@ router.get("/", (req, res, next) => {
     })
     .catch((err) => next(err));
 });
+
+
 
 router.get("/zip/:excursionId", async (req, res, next) => {
   try {
@@ -57,6 +65,8 @@ router.get("/zip/:excursionId", async (req, res, next) => {
   }
 });
 
+
+
 router.get("/:excursionId", async (req, res, next) => {
   try {
     const { excursionId } = req.params;
@@ -65,6 +75,22 @@ router.get("/:excursionId", async (req, res, next) => {
         ExcursionId: excursionId,
       },
     });
+
+  
+    
+    
+   const arrayData = responsePhotos.map(e => {
+    console.log(e, 'cada image')
+     return {
+        name: e.name,
+        type:e.type,
+        size:e.size,
+        data: e.data,
+        ExcursionId: e.ExcursionId
+     }
+    })
+
+ 
 
     responsePhotos.map((e) => {
       let dir = path.join(__dirname, `./dbImages${excursionId}`);
@@ -80,6 +106,13 @@ router.get("/:excursionId", async (req, res, next) => {
         e.data
       );
     });
+
+    
+    
+    // const pathImages = __dirname + '\dbImages' + excursionId + '\1-monkey.jgp'
+    
+    // console.log(pathImages, 'el path donde estan las imagenes')
+    
 
     const images = fs.readdirSync(
       path.join(__dirname, `./dbImages${excursionId}/`)
@@ -115,24 +148,29 @@ router.get("/:excursionId", async (req, res, next) => {
   }
 });
 
-router.post("/:excursionId", filesUpload, (req, res, next) => {
+router.post("/:excursionId", filesUpload, async(req, res, next) => {
   const { excursionId } = req.params;
   const photos = req.files;
-  const fotos = photos.map((e) => {
-    return {
-      name: e.originalname,
-      type: e.mimetype,
-      size: e.size,
-      data: fs.readFileSync(path.join(__dirname, "./images/" + e.filename)),
-    };
-  });
-  fotos.forEach((e) => {
-    return Photo.create(e)
-      .then((f) => f.setExcursion(excursionId))
-      .catch((err) => next(err));
-  });
-
-  res.json("Fotos creadas y asociadas correctamente");
+  console.log(photos, 'q hay en el arreglo?')
+  
+    
+  
+    const fotos = photos.map((e) => {
+      return {
+        name: e.originalname,
+        type: e.mimetype,
+        size: e.size,
+        data: fs.readFileSync(path.join(__dirname, "./images/" + e.filename)),
+      };
+    });
+    fotos.forEach((e) => {
+      return Photo.create(e)
+        .then((f) => f.setExcursion(excursionId))
+        .catch((err) => next(err));
+    });
+  
+    res.json("Fotos creadas y asociadas correctamente");
+  
 });
 
 router.delete('/:excursionId/:id/:name', (req, res, next) => {
