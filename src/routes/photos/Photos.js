@@ -2,23 +2,31 @@ const express = require("express");
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
-const axios = require('axios');
-const formData = require('form-data');
-const imgbbUploader = require('imgbb-uploader');
+const uuid = require("uuid").v4;
 const { Photo } = require("../../db");
+const { s3Uploadv2 } = require("./S3Service.js")
 const router = express.Router();
 
-// const formData = require('')
+
 
 const diskStorage = multer.diskStorage({
   destination: path.join(__dirname, "./images"),
   filename: (req, file, cb) => {
-    cb(null, Date.now() + "-monkey" + file.originalname);
+    cb(null,  `${file.originalname}-${uuid()}`);
   },
 });
 
+const fileFilter = (req, file, cb) => {
+  if(file.mimetype.split("/")[0] === "image"){
+    cb(null, true)
+  } else {
+    cb(new multer.MulterError("Archivo incorrecto. Sólo se aceptan imagenes"), false)
+  }
+}
+
 const filesUpload = multer({
   storage: diskStorage,
+  fileFilter
 }).array("images");
 
 
@@ -76,21 +84,6 @@ router.get("/:excursionId", async (req, res, next) => {
       },
     });
 
-  
-    
-    
-   const arrayData = responsePhotos.map(e => {
-    console.log(e, 'cada image')
-     return {
-        name: e.name,
-        type:e.type,
-        size:e.size,
-        data: e.data,
-        ExcursionId: e.ExcursionId
-     }
-    })
-
- 
 
     responsePhotos.map((e) => {
       let dir = path.join(__dirname, `./dbImages${excursionId}`);
@@ -107,18 +100,27 @@ router.get("/:excursionId", async (req, res, next) => {
       );
     });
 
-    
-    
-    // const pathImages = __dirname + '\dbImages' + excursionId + '\1-monkey.jgp'
-    
-    // console.log(pathImages, 'el path donde estan las imagenes')
-    
+    const results = await s3Uploadv2(responsePhotos, excursionId)
 
     const images = fs.readdirSync(
       path.join(__dirname, `./dbImages${excursionId}/`)
     );
 
-    res.status(200).json(images);
+    const finalArray = results.map(e => {
+      for(let i = results.indexOf(e); i < images.length; i++){
+        return {
+          ETag: e.ETag,
+          Location: e.Location,
+          key: e.key,
+          ley:e.key,
+          bucket: e.Bucket,
+          imgName: images[i]
+        }
+      }
+      
+    })
+
+    res.status(200).json(finalArray);
 
     function deletePhotosByTime() {
       Photo.destroy({
@@ -151,10 +153,9 @@ router.get("/:excursionId", async (req, res, next) => {
 router.post("/:excursionId", filesUpload, async(req, res, next) => {
   const { excursionId } = req.params;
   const photos = req.files;
-  console.log(photos, 'q hay en el arreglo?')
-  
-    
-  
+ 
+   
+
     const fotos = photos.map((e) => {
       return {
         name: e.originalname,
@@ -168,7 +169,7 @@ router.post("/:excursionId", filesUpload, async(req, res, next) => {
         .then((f) => f.setExcursion(excursionId))
         .catch((err) => next(err));
     });
-  
+    
     res.json("Fotos creadas y asociadas correctamente");
   
 });
