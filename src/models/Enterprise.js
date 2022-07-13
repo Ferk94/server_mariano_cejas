@@ -7,11 +7,6 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true
-    },
-    logo: {
-      type: DataTypes.STRING(160000),
-      allowNull: false
-      
     }
   });
 };
