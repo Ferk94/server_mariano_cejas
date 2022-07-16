@@ -27,7 +27,8 @@ router.get("/", (req, res, next) => {
             const filteredCoordinators = response.map(e => {
                 return {
                     id: e.id,
-                    name: e.name
+                    name: e.name,
+                    dropbox: e.dropbox
                 }
             })
             return res.json(filteredCoordinators);                        
@@ -44,7 +45,8 @@ router.get("/", (req, res, next) => {
                 return {
                     id: e.id,
                     name: e.name,
-                    EnterpriseId:e.EnterpriseId
+                    dropbox: e.dropbox,
+                    EnterpriseId: e.EnterpriseId
                 }
             })
             res.json(coordinators)
@@ -67,6 +69,7 @@ router.get('/:id', (req,res,next) => {
         const coordinator = {
             id:response.id,
             name:response.name,
+            dropbox: e.dropbox,
             EnterpriseId:response.EnterpriseId
         }
         res.json(coordinator);
@@ -78,10 +81,10 @@ router.get('/:id', (req,res,next) => {
 
 router.post("/:EnterpriseId", (req,res,next) => {
     
-    const { name } = req.body;
+    const { name, dropbox } = req.body;
     const { EnterpriseId } = req.params 
 
-    Coordinator.create({name})
+    Coordinator.create({name, dropbox})
     .then(responseWithBracelet => {
         return responseWithBracelet.setEnterprise(EnterpriseId)
     })
