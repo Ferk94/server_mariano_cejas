@@ -8,5 +8,9 @@ module.exports = (sequelize) => {
       allowNull: false,
       unique: true
     },
+    dropbox: {
+      type: DataTypes.STRING(16000),
+      allowNull: false,
+    }
   });
 }; 
