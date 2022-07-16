@@ -10,7 +10,6 @@ router.get("/", (req, res, next) => {
         return {
           id: e.id,
           name: e.name,
-          logo: e.logo,
         };
       });
       res.json(responseFinal);
@@ -30,7 +29,7 @@ router.post("/", (req, res, next) => {
 
 router.delete("/:id", (req, res, next) => {
   const { id } = req.params;
-
+console.log(id, 'q onda con el id')
   Enterprise.destroy({
     where: {
       id: id,
