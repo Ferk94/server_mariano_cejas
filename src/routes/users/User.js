@@ -58,41 +58,48 @@ router.delete("/:id", (req, res, next) => {
 });
 
 
-router.post('/login', (req, res, next) => {
+router.post('/login', async (req, res, next) => {
     const { email, password } = req.body
-
-       User.findOne({
-            where: {
-                email: email,
-                password: password
-            }
-        })
-            .then(usuario => {
-
-                const user = {
-                    id: usuario.id,
-                    name: usuario.name,
-                    email: usuario.email,
-                    password: usuario.password,
-                    phoneNumber: usuario.phoneNumber,
-                    coordinatorId: usuario.CoordinatorId,
-                    role: usuario.role,
-                    isAcepted: usuario.isAcepted
-                }
-                const token = jwt.sign({id: usuario.id}, "group8", {
-                    expiresIn:86400
-                })
-              
-                if(user.isAcepted === true || user.isAcepted === null){
-                  res.json({token, user});
-                }if(user.isAcepted === false){
-                  res.json({notAcepted: 'El administrador aún no lo ha aceptado'})
-                }else{
-                  res.status(500).json({notExist: 'Cuenta inexistente'})
-                }
-            })
+try {
+  const usuario = await User.findOne({
+    where: {
+        email: email,
+        password: password
+    }
+})
     
-        .catch(err => next(err))
+if(usuario){
+  const user = {
+    id: usuario.id,
+    name: usuario.name,
+    email: usuario.email,
+    phoneNumber: usuario.phoneNumber,
+    coordinatorId: usuario.CoordinatorId,
+    role: usuario.role,
+    isAcepted: usuario.isAcepted
+}
+const token = jwt.sign({id: usuario.id}, "group8", {
+    expiresIn:86400
+})
+
+if(user.isAcepted === true || user.isAcepted === null){
+  res.json({token, user});
+}
+if(user.isAcepted === false){
+  res.json({notAcepted: 'El administrador aún no lo ha aceptado'})
+}
+}
+        
+      else{
+          res.status(500).json({notExist: 'Cuenta inexistente'})
+        }
+}catch(err){
+  next(err)
+}
+     
+            
+    
+      
 });
 
 router.get("/:email/:password", (req, res, next) => {

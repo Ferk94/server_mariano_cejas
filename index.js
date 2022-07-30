@@ -3,7 +3,7 @@ const { conn, User } = require("./src/db.js");
 
 const usersData = require("./src/data/usersData");
 
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: false }).then(() => {
   console.log("base de datos conectada");
   usersData.forEach((e) => User.create(e));
   console.log("usuarios precargados");
