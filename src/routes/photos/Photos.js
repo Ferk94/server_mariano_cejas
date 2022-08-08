@@ -150,29 +150,56 @@ router.get("/:excursionId", async (req, res, next) => {
   }
 });
 
-router.post("/:excursionId", filesUpload, async(req, res, next) => {
-  const { excursionId } = req.params;
-  const photos = req.files;
+// router.post("/:excursionId", filesUpload, async(req, res, next) => {
+//   const { excursionId } = req.params;
+//   const photos = req.files;
  
    
 
-    const fotos = photos.map((e) => {
-      return {
-        name: e.originalname,
-        type: e.mimetype,
-        size: e.size,
-        data: fs.readFileSync(path.join(__dirname, "./images/" + e.filename)),
-      };
-    });
-    fotos.forEach((e) => {
-      return Photo.create(e)
-        .then((f) => f.setExcursion(excursionId))
-        .catch((err) => next(err));
-    });
+//     const fotos = photos.map((e) => {
+//       return {
+//         name: e.originalname,
+//         type: e.mimetype,
+//         size: e.size,
+//         data: fs.readFileSync(path.join(__dirname, "./images/" + e.filename)),
+//       };
+//     });
+//     fotos.forEach((e) => {
+//       return Photo.create(e)
+//         .then((f) => f.setExcursion(excursionId))
+//         .catch((err) => next(err));
+//     });
     
-    res.json("Fotos creadas y asociadas correctamente");
+//     res.json("Fotos creadas y asociadas correctamente");
   
-});
+// });
+
+router.post("/:excursionId", filesUpload, async (req, res, next) => {
+
+  try {
+    const { excursionId } = req.params;
+  const photos = req.files;
+
+  const fotos = photos.map((e) => {
+          return {
+            name: e.originalname,
+            type: e.mimetype,
+            size: e.size,
+            data: fs.readFileSync(path.join(__dirname, "./images/" + e.filename)),
+          };
+        });
+
+  const results = await s3Uploadv2(fotos, excursionId)
+  console.log(results, 'hay algo en results?')
+
+  res.json("Fotos creadas y asociadas correctamente")
+  }catch(err){
+    next(err)
+  }
+  
+
+
+})
 
 router.delete('/:excursionId/:id/:name', (req, res, next) => {
   const { excursionId, id, name } = req.params;

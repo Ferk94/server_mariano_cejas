@@ -8,7 +8,11 @@ module.exports = (sequelize) => {
       allowNull: false,
       unique: true
     },
-    dropbox: {
+    dropboxCel: {
+      type: DataTypes.STRING(16000),
+      allowNull: false,
+    },
+    dropboxPc: {
       type: DataTypes.STRING(16000),
       allowNull: false,
     }

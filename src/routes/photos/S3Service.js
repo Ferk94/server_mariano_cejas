@@ -6,13 +6,19 @@ const { AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION, AWS_BUCKET_NAME } 
 
 
 
+
 exports.s3Uploadv2 = async (files, id) => {
-    const s3 =  new S3()
+    console.log(files,' el arreglo')
+    const s3 =  new S3({
+        region: AWS_REGION,
+        accessKeyId: AWS_ACCESS_KEY_ID,
+        secretAccessKey: AWS_SECRET_ACCESS_KEY
+    })
 
     const params = files.map(file => {
         return {
             Bucket: AWS_BUCKET_NAME,
-            Key: `dbImages${id}/${file.originalname}-${uuid()}.${file.type.split("/")[1]}`,
+            Key: `dbImages${id}/${file.name}-${uuid()}.${file.type.split("/")[1]}`,
             Body: file.data
         }
     })
@@ -23,3 +29,12 @@ exports.s3Uploadv2 = async (files, id) => {
         params.map((param) => s3.upload(param).promise())
     );
 }
+
+// exports.getFileStream = async (fileKeys) => {
+//     const params = fileKeys.map(e => {
+//         return {
+//             Key: e,
+//             Bucket: AWS_BUCKET_NAME
+//         }
+//     })
+// }
