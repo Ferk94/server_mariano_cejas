@@ -130,13 +130,6 @@ router.post("/", (req, res, next) => {
           }
         }
       </style>
-        <style>
-          @media screen and (max-width:480px) {
-            table\0 {
-              width: 480px !important;
-              }
-          }
-        </style>
           <!--user entered Head Start-->
     
          <!--End Head user entered-->
