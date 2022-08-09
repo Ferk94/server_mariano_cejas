@@ -236,4 +236,4 @@ const userCreated = (password) => {
       </html>`
 } 
 
-export default userCreated;
+module.exports = userCreated;
