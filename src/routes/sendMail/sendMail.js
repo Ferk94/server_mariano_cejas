@@ -7,12 +7,13 @@ const { MAILER_EMAIL_DEV } = process.env;
 
 router.post("/", (req, res, next) => {
   const { to, password } = req.body;
-  let html = userCreated(password)
+  let htmlContent = userCreated(password)
+  console.log(htmlContent, 'contenido html')
   const emailOptions = {
     from: MAILER_EMAIL_DEV,
     to,
     subject: "Contraseña para ingresar a su book",
-    html: html
+    html: htmlContent
   };
 
   transporter
