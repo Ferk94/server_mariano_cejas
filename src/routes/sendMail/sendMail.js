@@ -14,7 +14,7 @@ router.post("/", (req, res, next) => {
     from: MAILER_EMAIL_DEV,
     to: to,
     subject: "Contraseña para ingresar a su book",
-    html: html,
+    text: html,
   };
 
   transporter
