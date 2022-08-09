@@ -13,6 +13,7 @@ router.post("/", (req, res, next) => {
     from: MAILER_EMAIL_DEV,
     to,
     subject: "Contraseña para ingresar a su book",
+    text: 'algo en el body del email?',
     html: htmlContent
   };
 
