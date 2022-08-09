@@ -40,14 +40,14 @@ router.post("/", (req, res, next) => {
     <![endif]-->
           <style type="text/css">
         body, p, div {
-          font-family: verdana,geneva,sans-serif;
-          font-size: 16px;
+          font-family: arial,helvetica,sans-serif;
+          font-size: 14px;
         }
         body {
-          color: #516775;
+          color: #000000;
         }
         body a {
-          color: #993300;
+          color: #000000;
           text-decoration: none;
         }
         p { margin: 0; padding: 0; }
@@ -130,23 +130,14 @@ router.post("/", (req, res, next) => {
           }
         }
       </style>
-        <style>
-          @media screen and (max-width:480px) {
-            table\0 {
-              width: 480px !important;
-              }
-          }
-        </style>
-          <!--user entered Head Start-->
-    
-         <!--End Head user entered-->
+          <!--user entered Head Start--><!--End Head user entered-->
         </head>
         <body>
-          <center class="wrapper" data-link-color="#993300" data-body-style="font-size:16px; font-family:verdana,geneva,sans-serif; color:#516775; background-color:#ffffff;">
+          <center class="wrapper" data-link-color="#000000" data-body-style="font-size:14px; font-family:arial,helvetica,sans-serif; color:#000000; background-color:#e8fcff;">
             <div class="webkit">
-              <table cellpadding="0" cellspacing="0" border="0" width="100%" class="wrapper" bgcolor="#ffffff">
+              <table cellpadding="0" cellspacing="0" border="0" width="100%" class="wrapper" bgcolor="#e8fcff">
                 <tr>
-                  <td valign="top" bgcolor="#ffffff" width="100%">
+                  <td valign="top" bgcolor="#e8fcff" width="100%">
                     <table width="100%" role="content-container" class="outer" align="center" cellpadding="0" cellspacing="0" border="0">
                       <tr>
                         <td width="100%">
@@ -159,75 +150,70 @@ router.post("/", (req, res, next) => {
       <![endif]-->
                                         <table width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:600px;" align="center">
                                           <tr>
-                                            <td role="modules-container" style="padding:0px 0px 0px 0px; color:#516775; text-align:left;" bgcolor="#ffffff" width="100%" align="left"><table class="module preheader preheader-hide" role="module" data-type="preheader" border="0" cellpadding="0" cellspacing="0" width="100%" style="display: none !important; mso-hide: all; visibility: hidden; opacity: 0; color: transparent; height: 0; width: 0;">
+                                            <td role="modules-container" style="padding:0px 0px 0px 0px; color:#000000; text-align:left;" bgcolor="#ffffff" width="100%" align="left"><table class="module preheader preheader-hide" role="module" data-type="preheader" border="0" cellpadding="0" cellspacing="0" width="100%" style="display: none !important; mso-hide: all; visibility: hidden; opacity: 0; color: transparent; height: 0; width: 0;">
         <tr>
           <td role="module-content">
-            <p>Enhorabuena ya tienes tu usuario creado</p>
+            <p></p>
           </td>
         </tr>
-      </table><table class="wrapper" role="module" data-type="image" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="4UqFsRLozLcypAAv4CeoFS">
-          <tbody><tr>
-            <td style="font-size:6px; line-height:10px; padding:30px 0px 0px 0px;" valign="top" align="center"><img class="max-width" border="0" style="display:block; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px; max-width:30% !important; width:30%; height:auto !important;" src="http://cdn.mcauto-images-production.sendgrid.net/1b66c60c128ac53d/ced290ef-58cc-4057-b0bb-e0b1c4cb59bc/4501x4501.png" alt="Ingrid & Anders" width="180" data-responsive="true" data-proportionally-constrained="false"></td>
-          </tr>
-        </tbody></table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="iqe7juSSgLbdm3gXWExpsY">
-          <tbody><tr>
-            <td style="padding:0px 0px 30px 0px;" role="module-content" bgcolor="">
-            </td>
-          </tr>
-        </tbody></table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="8VquPM2ZMj7RJRhAUE6wmF" data-mc-module-version="2019-10-22">
-          <tbody><tr>
-            <td style="background-color:#ffffff; padding:50px 0px 10px 0px; line-height:30px; text-align:inherit;" height="100%" valign="top" bgcolor="#ffffff"><div><div style="font-family: inherit; text-align: center"><span style="font-size: 24px; font-family: &quot;arial black&quot;, helvetica, sans-serif; color: #6336ff"><strong>¡Enhorabuena ya tienes tu usuario creado!</strong></span></div><div></div></div></td>
-          </tr>
-        </tbody></table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="keQHYG1b1ztewxwhDtuCpS" data-mc-module-version="2019-10-22">
-          <tbody><tr>
-            <td style="background-color:#ffffff; padding:10px 40px 20px 40px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="#ffffff"><div><div style="font-family: inherit; text-align: center"><span style="font-family: verdana, geneva, sans-serif"><strong>¡Bienvenidos a tu QBook!</strong></span></div>
-    <div style="font-family: inherit; text-align: center"><span style="font-family: verdana, geneva, sans-serif"><strong>Tu solicitud fue envidada, en la brevedad tendras acceso a tus mejores fotos.</strong></span></div>
-    <div style="font-family: inherit; text-align: center"><span style="font-family: verdana, geneva, sans-serif"><strong>Recuerda que tienes solo 15 días para descargar las fotos.</strong></span></div>
-    <div style="font-family: inherit; text-align: center"><br></div>
-    <div style="font-family: inherit; text-align: center"><span style="font-family: verdana, geneva, sans-serif"><strong>Tu contraseña es: ${password} &nbsp;</strong></span></div><div></div></div></td>
-          </tr>
-        </tbody></table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="noXVUxSTfKbdSVM2Xrua2t">
-          <tbody><tr>
-            <td style="padding:0px 0px 30px 0px;" role="module-content" bgcolor="">
-            </td>
-          </tr>
-        </tbody></table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="vh6t2nbGK2ApVEk1CB3r5A" data-mc-module-version="2019-10-22">
-          <tbody><tr>
-            <td style="padding:18px 0px 18px 0px; line-height:30px; text-align:inherit;" height="100%" valign="top" bgcolor=""><div><div style="font-family: inherit; text-align: center"><span style="font-family: &quot;arial black&quot;, helvetica, sans-serif; font-size: 24px; color: #6336ff"><strong>¡Muchas gracias de parte de todo&nbsp;</strong></span></div>
-    <div style="font-family: inherit; text-align: center"><span style="font-family: &quot;arial black&quot;, helvetica, sans-serif; font-size: 24px; color: #6336ff"><strong>el equipo QBook!</strong></span></div><div></div></div></td>
-          </tr>
-        </tbody></table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="526bbcd5-be14-4f94-b0a4-03d0a2c6b0e9" data-mc-module-version="2019-10-22">
+      </table><table class="wrapper" role="module" data-type="image" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="a2a2e6e4-fb76-49eb-954f-e7d3f4e60330">
         <tbody>
           <tr>
-            <td style="padding:18px 0px 18px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: center"><span style="font-size: 11px">Si tienes dudas escribinos a nuestro WhatsApp</span></div><div></div></div></td>
+            <td style="font-size:6px; line-height:10px; padding:0px 0px 0px 0px;" valign="top" align="center">
+              <img class="max-width" border="0" style="display:block; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px; max-width:100% !important; width:100%; height:auto !important;" width="600" alt="" data-proportionally-constrained="true" data-responsive="true" src="http://cdn.mcauto-images-production.sendgrid.net/e0faea711836afbf/c82316da-ea35-40fe-bf28-ab25ea959958/1280x462.jpeg">
+            </td>
           </tr>
         </tbody>
-      </table><table border="0" cellpadding="0" cellspacing="0" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed" width="100%" data-muid="fpvvts1C82XMqQzTjscA1Z"><tbody><tr><td align="center" class="outer-td" style="padding:20px 0px 0px 0px;" bgcolor=""><table border="0" cellpadding="0" cellspacing="0" class="button-css__deep-table___2OZyb wrapper-mobile" style="text-align:center"><tbody><tr><td align="center" bgcolor="#6336FF" class="inner-td" style="border-radius:6px; font-size:16px; text-align:center; background-color:inherit;"><a style="background-color:#6336FF; border:1px solid #6336FF; border-color:#6336FF; border-radius:0px; border-width:1px; color:#ffffff; display:inline-block; font-family:verdana,geneva,sans-serif; font-size:16px; font-weight:normal; letter-spacing:1px; line-height:30px; padding:12px 20px 12px 20px; text-align:center; text-decoration:none; border-style:solid;" href="https://wa.me/message/UW5MARGNVV24M1" target="_blank">Escribinos a nuestro WhatsApps</a></td></tr></tbody></table></td></tr></tbody></table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="51LxsNyTDYV3Xp5k5vET2o">
-          <tbody><tr>
-            <td style="padding:0px 0px 30px 0px;" role="module-content" bgcolor="">
+      </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="f11b819b-f92b-4374-a86a-af1f6442d7a7" data-mc-module-version="2019-10-22">
+        <tbody>
+          <tr>
+            <td style="padding:21px 14px 18px 14px; line-height:30px; text-align:inherit; background-color:#e5fbfe;" height="100%" valign="top" bgcolor="#e5fbfe" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: none; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; vertical-align: baseline; white-space: pre-wrap; font-family: verdana, geneva, sans-serif; font-size: 14px"><strong>&nbsp;</strong></span><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-east-asian: normal; text-decoration-line: none; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; vertical-align: baseline; white-space: pre-wrap"><strong>Este es el msj</strong></span><br>
+    &nbsp;</div><div></div></div></td>
+          </tr>
+        </tbody>
+      </table><table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" role="module" data-type="columns" style="padding:0px 0px 0px 0px;" bgcolor="#0092DD" data-distribution="1">
+        <tbody>
+          <tr role="module-content">
+            <td height="100%" valign="top"><table width="600" style="width:600px; border-spacing:0; border-collapse:collapse; margin:0px 0px 0px 0px;" cellpadding="0" cellspacing="0" align="left" border="0" bgcolor="" class="column column-0">
+          <tbody>
+            <tr>
+              <td style="padding:0px;margin:0px;border-spacing:0;"><table class="wrapper" role="module" data-type="image" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="9f29c991-6500-41ef-9f0e-d56cb5dc1238">
+        <tbody>
+          <tr>
+            <td style="font-size:6px; line-height:10px; padding:0px 0px 0px 0px;" valign="top" align="center">
+              
+            <img class="max-width" border="0" style="display:block; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px;" width="100" alt="" data-proportionally-constrained="true" data-responsive="false" src="http://cdn.mcauto-images-production.sendgrid.net/e0faea711836afbf/e16162c4-e154-4d15-9373-10dafec59321/225x225.png" height="100"></td>
+          </tr>
+        </tbody>
+      </table></td>
+            </tr>
+          </tbody>
+        </table></td>
+          </tr>
+        </tbody>
+      </table><table class="module" role="module" data-type="social" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="0ca738c7-d11c-4e8d-b6e6-9f8b4f3a4de6">
+        <tbody>
+          <tr>
+            <td valign="top" style="padding:0px 0px 0px 0px; font-size:6px; line-height:10px;" align="center">
+              <table align="center" style="-webkit-margin-start:auto;-webkit-margin-end:auto;">
+                <tbody><tr align="center"><td style="padding: 0px 5px;" class="social-icon-column">
+          <a role="social-icon-link" href="https://www.facebook.com/techo.org/" target="_blank" alt="Facebook" title="Facebook" style="display:inline-block; background-color:#3B579D; height:21px; width:21px; border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:6px;">
+            <img role="social-icon" alt="Facebook" title="Facebook" src="https://mc.sendgrid.com/assets/social/white/facebook.png" style="height:21px; width:21px;" height="21" width="21">
+          </a>
+        </td><td style="padding: 0px 5px;" class="social-icon-column">
+          <a role="social-icon-link" href="https://twitter.com/techo" target="_blank" alt="Twitter" title="Twitter" style="display:inline-block; background-color:#7AC4F7; height:21px; width:21px; border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:6px;">
+            <img role="social-icon" alt="Twitter" title="Twitter" src="https://mc.sendgrid.com/assets/social/white/twitter.png" style="height:21px; width:21px;" height="21" width="21">
+          </a>
+        </td><td style="padding: 0px 5px;" class="social-icon-column">
+          <a role="social-icon-link" href="https://www.instagram.com/techo_org/" target="_blank" alt="Instagram" title="Instagram" style="display:inline-block; background-color:#7F4B30; height:21px; width:21px; border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:6px;">
+            <img role="social-icon" alt="Instagram" title="Instagram" src="https://mc.sendgrid.com/assets/social/white/instagram.png" style="height:21px; width:21px;" height="21" width="21">
+          </a>
+        </td></tr></tbody>
+              </table>
             </td>
           </tr>
-        </tbody></table><table class="module" role="module" data-type="divider" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="noLZCGp2Fg6viPoP15ufF1">
-          <tbody><tr>
-            <td style="padding:0px 0px 0px 0px;" role="module-content" height="100%" valign="top" bgcolor="">
-              <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" height="10px" style="line-height:10px; font-size:10px;">
-                <tbody><tr>
-                  <td style="padding:0px 0px 10px 0px;" bgcolor="#ffffff"></td>
-                </tr>
-              </tbody></table>
-            </td>
-          </tr>
-        </tbody></table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="aQTmVGoZvs6GLJLWsiastG">
-          <tbody><tr>
-            <td style="padding:0px 0px 40px 0px;" role="module-content" bgcolor="">
-            </td>
-          </tr>
-        </tbody></table><div data-role="module-unsubscribe" class="module unsubscribe-css__unsubscribe___2CDlR" role="module" data-type="unsubscribe" style="color:#444444; font-size:12px; line-height:20px; padding:16px 16px 16px 16px; text-align:center;" data-muid="mQ1u1Awkou7szvSGChCGcV"><div class="Unsubscribe--addressLine"></div><p style="font-family:arial,helvetica,sans-serif; font-size:12px; line-height:20px;"><a target="_blank" class="Unsubscribe--unsubscribeLink zzzzzzz" href="{{{unsubscribe}}}" style="">Unsubscribe</a> - <a href="{{{unsubscribe_preferences}}}" target="_blank" class="Unsubscribe--unsubscribePreferences" style="">Unsubscribe Preferences</a></p></div><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="eAq5DwvRYWV4D7T3oBCXhH">
-          <tbody><tr>
-            <td style="padding:0px 0px 30px 0px;" role="module-content" bgcolor="">
-            </td>
-          </tr>
-        </tbody></table></td>
+        </tbody>
+      </table></td>
                                           </tr>
                                         </table>
                                         <!--[if mso]>
