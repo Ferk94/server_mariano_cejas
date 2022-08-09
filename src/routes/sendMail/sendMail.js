@@ -1,5 +1,5 @@
 const express = require("express");
-const { userCreated } = require("../../services/mailer/templates/userCreated");   
+const  userCreated  = require("../../services/mailer/templates/userCreated");   
 const router = express.Router();
 
 const transporter = require("../../services/mailer/mailer");
