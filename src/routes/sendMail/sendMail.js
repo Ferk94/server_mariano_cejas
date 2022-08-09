@@ -1,4 +1,5 @@
 const express = require("express");
+const { userCreated } = require("../../services/mailer/templates/userCreated");   
 const router = express.Router();
 
 const transporter = require("../../services/mailer/mailer");
@@ -10,8 +11,7 @@ router.post("/", (req, res, next) => {
     from: MAILER_EMAIL_DEV,
     to,
     subject: "Contraseña para ingresar a su book",
-    text: `La contraseña para ingresar a su book es ${password}.
-               Muchas gracias`,
+    html: userCreated(password)
   };
 
   transporter
