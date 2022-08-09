@@ -233,7 +233,7 @@ const userCreated = (password) => {
             </div>
           </center>
         </body>
-      </html>`
+      </html>`;
 } 
 
 module.exports = userCreated;

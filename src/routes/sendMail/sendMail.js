@@ -1,7 +1,7 @@
 const express = require("express");
-const  userCreated  = require("../../services/mailer/templates/userCreated");   
 const router = express.Router();
 
+const userCreated = require("../../services/mailer/templates/userCreated");   
 const transporter = require("../../services/mailer/mailer");
 const { MAILER_EMAIL_DEV } = process.env;
 
