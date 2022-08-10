@@ -162,7 +162,7 @@ const userCreated = (password) => {
     <div style="font-family: inherit; text-align: center"><span style="font-family: verdana, geneva, sans-serif"><strong>Tu solicitud fue envidada, en la brevedad tendras acceso a tus mejores fotos.</strong></span></div>
     <div style="font-family: inherit; text-align: center"><span style="font-family: verdana, geneva, sans-serif"><strong>Recuerda que tienes solo 15 días para descargar las fotos.</strong></span></div>
     <div style="font-family: inherit; text-align: center"><br></div>
-    <div style="font-family: inherit; text-align: center"><span style="font-family: verdana, geneva, sans-serif"><strong>Tu contraseña es: &nbsp;</strong></span></div><div></div></div></td>
+    <div style="font-family: inherit; text-align: center"><span style="font-family: verdana, geneva, sans-serif"><strong>Tu contraseña es: ${password} &nbsp;</strong></span></div><div></div></div></td>
           </tr>
         </tbody></table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="noXVUxSTfKbdSVM2Xrua2t">
           <tbody><tr>
