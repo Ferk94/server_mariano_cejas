@@ -145,7 +145,7 @@ const userCreated = (password) => {
         </tr>
       </table><table class="wrapper" role="module" data-type="image" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="4UqFsRLozLcypAAv4CeoFS">
           <tbody><tr>
-            <td style="font-size:6px; line-height:10px; padding:30px 0px 0px 0px;" valign="top" align="center"><img class="max-width" border="0" style="display:block; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px; max-width:30% !important; width:30%; height:auto !important;" src="http://cdn.mcauto-images-production.sendgrid.net/1b66c60c128ac53d/ced290ef-58cc-4057-b0bb-e0b1c4cb59bc/4501x4501.png" alt="Ingrid & Anders" width="180" data-responsive="true" data-proportionally-constrained="false"></td>
+            <td style="font-size:6px; line-height:10px; padding:30px 0px 0px 0px;" valign="top" align="center"><a href="http://www.qbook.digital/"><img class="max-width" border="0" style="display:block; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px; max-width:30% !important; width:30%; height:auto !important;" src="http://cdn.mcauto-images-production.sendgrid.net/1b66c60c128ac53d/ced290ef-58cc-4057-b0bb-e0b1c4cb59bc/4501x4501.png" alt="Ingrid & Anders" width="180" data-responsive="true" data-proportionally-constrained="false"></a></td>
           </tr>
         </tbody></table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="iqe7juSSgLbdm3gXWExpsY">
           <tbody><tr>
@@ -162,7 +162,7 @@ const userCreated = (password) => {
     <div style="font-family: inherit; text-align: center"><span style="font-family: verdana, geneva, sans-serif"><strong>Tu solicitud fue envidada, en la brevedad tendras acceso a tus mejores fotos.</strong></span></div>
     <div style="font-family: inherit; text-align: center"><span style="font-family: verdana, geneva, sans-serif"><strong>Recuerda que tienes solo 15 días para descargar las fotos.</strong></span></div>
     <div style="font-family: inherit; text-align: center"><br></div>
-    <div style="font-family: inherit; text-align: center"><span style="font-family: verdana, geneva, sans-serif"><strong>Tu contraseña es: ${password} &nbsp;</strong></span></div><div></div></div></td>
+    <div style="font-family: inherit; text-align: center"><span style="font-family: verdana, geneva, sans-serif"><strong>Tu contraseña es: &nbsp;</strong></span></div><div></div></div></td>
           </tr>
         </tbody></table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="noXVUxSTfKbdSVM2Xrua2t">
           <tbody><tr>
@@ -180,7 +180,23 @@ const userCreated = (password) => {
             <td style="padding:18px 0px 18px 0px; line-height:22px; text-align:inherit;" height="100%" valign="top" bgcolor="" role="module-content"><div><div style="font-family: inherit; text-align: center"><span style="font-size: 11px">Si tienes dudas escribinos a nuestro WhatsApp</span></div><div></div></div></td>
           </tr>
         </tbody>
-      </table><table border="0" cellpadding="0" cellspacing="0" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed" width="100%" data-muid="fpvvts1C82XMqQzTjscA1Z"><tbody><tr><td align="center" class="outer-td" style="padding:20px 0px 0px 0px;" bgcolor=""><table border="0" cellpadding="0" cellspacing="0" class="button-css__deep-table___2OZyb wrapper-mobile" style="text-align:center"><tbody><tr><td align="center" bgcolor="#6336FF" class="inner-td" style="border-radius:6px; font-size:16px; text-align:center; background-color:inherit;"><a style="background-color:#6336FF; border:1px solid #6336FF; border-color:#6336FF; border-radius:0px; border-width:1px; color:#ffffff; display:inline-block; font-family:verdana,geneva,sans-serif; font-size:16px; font-weight:normal; letter-spacing:1px; line-height:30px; padding:12px 20px 12px 20px; text-align:center; text-decoration:none; border-style:solid;" href="https://wa.me/message/UW5MARGNVV24M1" target="_blank">Escribinos a nuestro WhatsApps</a></td></tr></tbody></table></td></tr></tbody></table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="51LxsNyTDYV3Xp5k5vET2o">
+      </table><table border="0" cellpadding="0" cellspacing="0" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed" width="100%" data-muid="fpvvts1C82XMqQzTjscA1Z"><tbody><tr><td align="center" class="outer-td" style="padding:20px 0px 0px 0px;" bgcolor=""><table border="0" cellpadding="0" cellspacing="0" class="button-css__deep-table___2OZyb wrapper-mobile" style="text-align:center"><tbody><tr><td align="center" bgcolor="#6336FF" class="inner-td" style="border-radius:6px; font-size:16px; text-align:center; background-color:inherit;"><a style="background-color:#6336FF; border:1px solid #6336FF; border-color:#6336FF; border-radius:0px; border-width:1px; color:#ffffff; display:inline-block; font-family:verdana,geneva,sans-serif; font-size:16px; font-weight:normal; letter-spacing:1px; line-height:30px; padding:12px 20px 12px 20px; text-align:center; text-decoration:none; border-style:solid;" href="https://wa.me/message/W6PH7DKBWGHQA1" target="_blank">Escribinos a nuestro WhatsApps</a></td></tr></tbody></table></td></tr></tbody></table><table border="0" cellpadding="0" cellspacing="0" class="module" data-role="module-button" data-type="button" role="module" style="table-layout:fixed;" width="100%" data-muid="fpvvts1C82XMqQzTjscA1Z.1">
+          <tbody>
+            <tr>
+              <td align="center" bgcolor="" class="outer-td" style="padding:20px 0px 0px 0px;">
+                <table border="0" cellpadding="0" cellspacing="0" class="wrapper-mobile" style="text-align:center;">
+                  <tbody>
+                    <tr>
+                    <td align="center" bgcolor="#6336FF" class="inner-td" style="border-radius:6px; font-size:16px; text-align:center; background-color:inherit;">
+                      <a href="http://www.qbook.digital/" style="background-color:#6336FF; border:1px solid #6336FF; border-color:#6336FF; border-radius:0px; border-width:1px; color:#ffffff; display:inline-block; font-size:16px; font-weight:normal; letter-spacing:1px; line-height:30px; padding:12px 20px 12px 20px; text-align:center; text-decoration:none; border-style:solid; font-family:verdana,geneva,sans-serif;" target="_blank">Ingresar a Qbook</a>
+                    </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table><table class="module" role="module" data-type="spacer" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="51LxsNyTDYV3Xp5k5vET2o">
           <tbody><tr>
             <td style="padding:0px 0px 30px 0px;" role="module-content" bgcolor="">
             </td>
