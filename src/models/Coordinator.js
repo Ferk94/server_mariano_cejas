@@ -10,11 +10,11 @@ module.exports = (sequelize) => {
     },
     dropboxCel: {
       type: DataTypes.STRING(16000),
-      allowNull: false,
+      allowNull: true,
     },
     dropboxPc: {
       type: DataTypes.STRING(16000),
-      allowNull: false,
+      allowNull: true,
     }
   });
 }; 
