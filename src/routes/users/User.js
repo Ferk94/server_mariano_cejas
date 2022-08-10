@@ -33,16 +33,20 @@ router.post('/', (req, res, next) => {
             CoordinatorId: CoordinatorId,
             isAcepted: false
             }
-        User.create(newUser)
-        .then((userWithIds) => {
-            jwt.sign({newUser}, 'secretkey', {expiresIn: 86400}, (err, token) => {
-                res.json({
-                    userWithIds, token
-                })
-            })
-        })
-   
-    .catch(err => next(err))
+            if(newUser.CoordinatorId !== null){
+              User.create(newUser)
+              .then((userWithIds) => {
+                  jwt.sign({newUser}, 'secretkey', {expiresIn: 86400}, (err, token) => {
+                      res.json({
+                          userWithIds, token
+                      })
+                  })
+              })
+         
+          .catch(err => next(err))
+            }else {
+              res.json('No ha podido crear la cuenta xq no ha asociado un coordinador.')
+            }
 })
 
 
