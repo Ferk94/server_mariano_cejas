@@ -37,13 +37,13 @@ router.get("/", async (req, res, next) => {
     function coordinatorName(id) {
       const coordinator = coordinadores.find((e) => e.id === id);
       console.log(coordinator, 'llega?')
-      const name = coordinator.name;
+      const name = coordinator?.name;
       return name;
     }
 
     function enterpriseName(id) {
       const obj = empresas.find((e) => e.id === id);
-      const name = obj.name;
+      const name = obj?.name;
 
       return name;
     }
@@ -71,8 +71,8 @@ router.get("/", async (req, res, next) => {
 
     function userData() {
       const data = users.map((e) => {
-        const coordinator = FixedCoordinators.find(
-          (f) => e.CoordinatorId === f.id
+        const coordinator = FixedCoordinators?.find(
+          (f) => e?.CoordinatorId === f?.id
         );
 
         return {
@@ -82,7 +82,7 @@ router.get("/", async (req, res, next) => {
           phoneNumber: e.phoneNumber,
           password: e.password,
           coordinator: coordinatorName(e.CoordinatorId),
-          enterprise: coordinator.enterprise,
+          enterprise: coordinator?.enterprise,
           isAcepted: e.isAcepted
         };
       });
