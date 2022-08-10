@@ -45,7 +45,7 @@ router.post('/', (req, res, next) => {
          
           .catch(err => next(err))
             }else {
-              res.json('No ha podido crear la cuenta xq no ha asociado un coordinador.')
+              res.json('No ha podido crear la cuenta porque no ha asociado un coordinador.')
             }
 })
 
