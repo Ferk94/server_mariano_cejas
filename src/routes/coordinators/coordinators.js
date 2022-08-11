@@ -70,8 +70,8 @@ router.get('/:id', (req,res,next) => {
         const coordinator = {
             id:response.id,
             name:response.name,
-            dropboxCel: e.dropboxCel,
-            dropboxPc: e.dropboxPc,
+            dropboxCel: response.dropboxCel,
+            dropboxPc: response.dropboxPc,
             EnterpriseId:response.EnterpriseId
         }
         res.json(coordinator);
